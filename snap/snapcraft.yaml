@@ -21,6 +21,12 @@ description: |
 
   For more information see: https://pre-commit.com/
 
+  **Snap specifc information**
+
+  This is NOT a official distribution of pre-commit, for any problem regarding the usage of this snap please refer to the snap issue tracker:
+
+  https://github.com/Lin-Buo-Ren/pre-commit-snap/issues
+
 # The path of icon to represent the snap, relative to the source tree directory
 # Only PNG or SVG image is supported, dimension must be greater than 256x256px
 icon: snap/gui/logo.256px.png
