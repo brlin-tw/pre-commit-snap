@@ -159,6 +159,9 @@ parts:
     - git-stable-ppa
     plugin: nil
     stage-packages:
+    # Used by libexec/git-sh-i18n
+    - gettext-base
+
     - git
 
 # Apps that are exposed by the snap package
@@ -183,6 +186,7 @@ apps:
     environment:
       # Git fix-up
       GIT_EXEC_PATH: $SNAP/usr/lib/git-core
+      GIT_TEXTDOMAINDIR: $SNAP/usr/share/locale
       PREFIX: $SNAP
 
 # Refer the following documentation for asserting interface plugs and slots in a security confined snap:
