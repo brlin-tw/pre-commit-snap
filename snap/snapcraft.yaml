@@ -169,11 +169,11 @@ apps:
     command: bin/pre-commit
 
     # The commands that are run, in order, before running the one specified by the `command` key
-    command-chain:
+    command-chain: &command-chain
     - bin/locales-launch
     - bin/pre-commit-launch
 
-    environment:
+    environment: &environment
       # Ensure we use the in-snap python interpreter
       PATH: $SNAP/usr/bin:$PATH
 
