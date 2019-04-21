@@ -143,26 +143,16 @@ parts:
 
     plugin: python
 
-  # FIXME: This should really be provided by a seperate snap via content sharing support
-  git-stable-ppa:
+  python:
     plugin: nil
-    build-packages:
-    - software-properties-common
-    override-pull: |
-      sudo add-apt-repository \
-        --yes \
-        ppa:git-core/ppa
-      sudo apt update
+    override-prime: |
+      snapcraftctl prime
 
-  git:
-    after:
-    - git-stable-ppa
-    plugin: nil
-    stage-packages:
-    # Used by libexec/git-sh-i18n
-    - gettext-base
-
-    - git
+      ln \
+        --verbose \
+        --symbolic \
+        python3 \
+        usr/bin/python
 
 # Apps that are exposed by the snap package
 # If the _app_name_ is identical with the _snap_name_ it can be directly run
@@ -184,10 +174,9 @@ apps:
     - bin/pre-commit-launch
 
     environment:
-      # Git fix-up
-      GIT_EXEC_PATH: $SNAP/usr/lib/git-core
-      GIT_TEXTDOMAINDIR: $SNAP/usr/share/locale
-      PREFIX: $SNAP
+      # Ensure we use the in-snap python interpreter
+      PATH: $SNAP/usr/bin:$PATH
+
 
 # Refer the following documentation for asserting interface plugs and slots in a security confined snap:
 # Interface management - doc - snapcraft.io
