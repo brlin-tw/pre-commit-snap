@@ -6,3 +6,7 @@ repos:
     hooks:
     -   id: check-yaml
     -   id: check-added-large-files
+- repo: https://github.com/jumanjihouse/pre-commit-hooks
+  sha: 1.11.0
+  hooks:
+    - id: shellcheck
