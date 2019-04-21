@@ -95,6 +95,7 @@ before_script: true
 ### Put your build scripts here
 script:
   - git diff-tree -z --no-commit-id --name-only -r HEAD | xargs --null pre-commit run --files
+  - sudo apt update
   - snapcraft --destructive-mode
 
 ### You can remove files that are not needed for caching here
