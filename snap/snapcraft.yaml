@@ -177,6 +177,17 @@ apps:
       # Ensure we use the in-snap python interpreter
       PATH: $SNAP/usr/bin:$PATH
 
+  validate-config:
+    adapter: full
+    command: bin/pre-commit-validate-config
+    command-chain: *command-chain
+    environment: *environment
+
+  validate-manifest:
+    adapter: full
+    command: bin/pre-commit-validate-manifest
+    command-chain: *command-chain
+    environment: *environment
 
 # Refer the following documentation for asserting interface plugs and slots in a security confined snap:
 # Interface management - doc - snapcraft.io
