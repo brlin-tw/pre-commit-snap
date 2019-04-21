@@ -44,6 +44,13 @@ license: MIT
 # https://forum.snapcraft.io/t/extracting-information-from-sources-in-snapcraft-parts/4642
 adopt-info: main
 
+# Git stable PPA doesn't provide build on s390x/ppc64le
+architectures:
+- build-on: i386
+- build-on: amd64
+- build-on: armhf
+- build-on: arm64
+
 # Base runtime
 # The common runtime for the snap to run on, or `bare` for static linked applications
 base: core
