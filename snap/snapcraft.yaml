@@ -65,7 +65,7 @@ base: core
 # Use `devmode` to getting started
 # Flip to `strict` once you have the right plugs and slots,
 # or `classic` once you determine that strict confinement is not currently possible
-confinement: strict
+confinement: classic
 
 # Snap Grade
 # Use `devel` to getting started
