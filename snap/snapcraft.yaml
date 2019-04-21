@@ -177,6 +177,9 @@ apps:
       # Ensure we use the in-snap python interpreter
       PATH: $SNAP/usr/bin:$PATH
 
+      # Avoid cache being invalidated due to snap refresh
+      XDG_CACHE_HOME: $SNAP_USER_COMMON/.cache
+
   validate-config:
     adapter: full
     command: bin/pre-commit-validate-config
