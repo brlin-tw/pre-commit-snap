@@ -1,6 +1,6 @@
 %YAML 1.1
 ---
-# Snapcraft Recipe for [Project]
+# Snapcraft Recipe for pre-commit
 # ------------------------------
 # This file is in the YAML data serialization format:
 # http://yaml.org
@@ -17,13 +17,13 @@
 # All following comments, including this one, are designed to be stripped
 # before contributing the recipe to the upstream
 
-# [Project], my-awesome-app, my-awesome-app-launch
+# pre-commit, pre-commit, pre-commit-launch
 # are placeholders text meant to be replaced by appropriate content
-name: my-awesome-app
-title: My Awesome App.
-summary: Single-line elevator pitch for your amazing snap under 79 chars.
+name: pre-commit
+title: pre-commit (UNOFFICIAL)
+summary: A framework for managing and maintaining multi-language pre-commit hooks
 description: |
-  This is my-awesome-app's description. You have a paragraph or two to tell
+  This is pre-commit's description. You have a paragraph or two to tell
   the most important story about your snap. Keep it under 100 words though,
   we live in tweetspace and your description wants to look good in the snap
   store.
@@ -33,7 +33,7 @@ description: |
 
 # The path of icon to represent the snap, relative to the source tree directory
 # Only PNG or SVG image is supported, dimension must be greater than 256x256px
-icon: snap/gui/my-awesome-app.png
+icon: snap/gui/logo.256px.png
 
 # The license of this application, in SPDX format
 # NOTE: Currently only supports SPDX 2.1 license expressions, as described in Appendix IV of
@@ -167,7 +167,7 @@ parts:
 
     plugin: dump
     organize:
-      my-awesome-app: bin/
+      pre-commit: bin/
     stage:
     - bin/*
 
@@ -184,23 +184,23 @@ parts:
 # with `_snap_name_` or `snap run _snap_name_` commands, otherwise it can only be run
 # via `_snap_name_._app_name_` or `snap run _snap_name_._app_name_`
 apps:
-  my-awesome-app:
+  pre-commit:
     # The adapter to set up runtime environment at the launch of the snap
     # NOTE: The `command-chain` property is only supported by the `full` adapter
     adapter: full
 
     # An *relative path* to an executable file root from the `prime` directory to be executed, and its command-line arguments
     # NOTE: The right angle bracket at the beginning of the value of the `command` keyword starts a YAML folded style block scalar, refer the following spec document for more info: http://yaml.org/spec/1.2/spec.html#id2796251
-    command: bin/my-awesome-app
+    command: bin/pre-commit
 
     # The commands that are run, in order, before running the one specified by the `command` key
     command-chain:
     - bin/desktop-launch
-    - bin/my-awesome-app-launch
+    - bin/pre-commit-launch
 
     # If the providing part of the app. has a desktop entry, specify its path relative to the `prime` directory.
     # If the packaging target doesn't provide a desktop entry, ignore the `desktop` key and implement a desktop entry in `/snap/gui`
-    #desktop: share/applications/my-awesome-app.desktop
+    #desktop: share/applications/pre-commit.desktop
 
 # Refer the following documentation for asserting interface plugs and slots in a security confined snap:
 # Interface management - doc - snapcraft.io
