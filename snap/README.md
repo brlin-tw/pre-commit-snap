@@ -7,9 +7,7 @@
 
 **This is the unofficial snap for pre-commit**, *"A framework for managing and maintaining multi-language pre-commit hooks"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
-<!-- Uncomment and modify this when you are provided a build status badge
 [![Build Status Badge of the `pre-commit` Snap](https://build.snapcraft.io/badge/Lin-Buo-Ren/pre-commit-snap.svg "Build Status of the `pre-commit` snap")](https://build.snapcraft.io/user/Lin-Buo-Ren/pre-commit-snap)
--->
 
 ![Screenshot of the Snapped Application](local/screenshots/precommit-run-allfiles-result.png "Screenshot of the Snapped Application")
 
