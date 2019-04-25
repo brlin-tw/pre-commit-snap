@@ -39,13 +39,14 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/pre-commit)
 -->
 
-<!-- Uncomment when you have test results
 ## What is Working
-* [A list of functionallities that are verified working]
+* Launch
+* `pre-commit run --all-files` on `pre-commit/pre-commit`
+* `pre-commit run --all-files` on a repository that has arbitrary depending command hook
+* `pre-commit.validate-config`
 
 ## What is NOT Working...yet 
 Check out the [issue tracker](https://github.com/Lin-Buo-Ren/pre-commit-snap/issues) for known issues.
--->
 
 ## Support
 * Report issues regarding using this snap to the issue tracker:  
