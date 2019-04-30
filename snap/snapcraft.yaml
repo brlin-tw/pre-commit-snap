@@ -191,17 +191,3 @@ apps:
     command: bin/pre-commit-validate-manifest
     command-chain: *command-chain
     environment: *environment
-
-# Refer the following documentation for asserting interface plugs and slots in a security confined snap:
-# Interface management - doc - snapcraft.io
-# https://docs.snapcraft.io/interface-management/6154
-# Supported interfaces - doc - snapcraft.io
-# https://docs.snapcraft.io/supported-interfaces/7744
-# Non-A/C: Non-autoconnect interface
-plugs:
-  # Regular files access
-  home:
-  removable-media: # Non-A/C
-
-  # Network access
-  network:
